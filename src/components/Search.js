@@ -12,7 +12,7 @@ const Search =()=> {
       setImg(data);
 
       axios
-        .get(`http://localhost:8081/books/list/${data}`)
+        .get(`http://localhost:8081/list/${data}`)
         .then(res => {
             setApi(res.data)
         })

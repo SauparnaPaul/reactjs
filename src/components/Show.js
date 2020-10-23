@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Document, Page, pdfjs } from 'react-pdf';
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
-const url =  "http://localhost:8081/books/getpdf1"
+const url =  "http://localhost:8081/getpdf1"
   
 
 export default function Show() {
@@ -51,7 +51,7 @@ export default function Show() {
           file={url}
           onLoadSuccess={onDocumentLoadSuccess}
         >
-          <Page width={zoom}  pageNumber={pageNumber} renderTextLayer="false" className="custom-class-name-1 custom-class-name-2"/>
+          <Page width={zoom}  pageNumber={pageNumber} className="custom-class-name-1 custom-class-name-2"/>
         </Document>
         
         <div>

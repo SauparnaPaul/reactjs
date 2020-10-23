@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import AllBook from './AllBook';
 
-
 export default class BookList extends Component {
 
     constructor(props) {
@@ -23,7 +22,7 @@ export default class BookList extends Component {
     }
 
       componentDidMount() {
-        axios.get("http://localhost:8081/books/booklist/").then(
+        axios.get("http://localhost:8081/booklist/").then(
           result => {
             this.setState({
               isLoaded: true,
